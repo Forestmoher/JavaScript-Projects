@@ -25,3 +25,7 @@ document.write(" " + thug1 + " is fat, of course.");
 document.write(" " + boss + " " + thug1 + " " + thug2 + " ");
 
 document.write(2 + 1 + " lousy thugs"); 
+
+function getoutahere() {
+    alert("Get Outa Here!");
+}
