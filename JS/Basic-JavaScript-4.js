@@ -10,3 +10,4 @@ function dictionary() {
     delete Cake.Flour;
     document.getElementById("recipe").innerHTML = "Start with " + Cake.Flour + " of flour.";
 }
+
