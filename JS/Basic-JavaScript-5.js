@@ -59,3 +59,4 @@ document.getElementById("or").innerHTML = (6>7 || 7>5);
 function notfunction() {
     document.getElementById("not").innerHTML = !(30>20);
 }
+
