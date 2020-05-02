@@ -1,5 +1,5 @@
 function countdown() {
-    var seconds = document.getElementById("seconds").innerHTML.value;
+    var seconds = document.getElementById("seconds").value;
 
     function tick() {
         seconds = seconds - 1;
@@ -11,4 +11,36 @@ function countdown() {
 
     }
     tick();
+}
+
+//slideshow code
+var slideIndex = 1;
+showSlides(slideIndex); // determines which slide to show and which slides to hide
+
+function slidemove(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentslide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if(n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Basic-CSS-1.css">
 </head>
 
 <body>
@@ -13,6 +14,49 @@
     <input id="seconds" value="" />
     <button onclick="countdown()">Click here</button>
     <p id="timer"></p>
+
+    
+    <h1>My trip to Mars</h1>
+
+    <div class="slide-show-container">
+
+        <div class="slide fade">
+            <div class="slide-number">1 / 4</div>
+            <img src="images/image_1.jpg" style="width:100%" alt="">
+            <div class="image-text">Caption</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-number">2 / 4</div>
+            <img src="images/image_2.jpg" alt="">
+            <div class="image-text">Caption</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-number">3 / 4</div>
+            <img src="images/image_3.jpg" alt="">
+            <div class="image-text">Caption</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-number">4 / 4</div>
+            <img src="images/image_4.jpg" alt="">
+            <div class="image-text">Caption</div>
+        </div>
+
+    <a class="previous" onclick="slidemove(1)">&#10094;</a> <!--anchor to change slide left-->
+    <a class="next" onclick="slidemove(-1)">&#10095;</a> <!--anchor to change slide right-->
+
+    </div>
+    <br>
+
+    <div class="dot-container" style="text-align:center">
+        <span class="dot" onclick="currentslide(1)"></span>
+        <span class="dot" onclick="currentslide(2)"></span>
+        <span class="dot" onclick="currentslide(3)"></span>
+        <span class="dot" onclick="currentslide(4)"></span>
+    </div>
+
 
     <script src="JS/Basic-JavaScript-9.js"></script>
 </body>
