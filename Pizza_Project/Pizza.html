@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+    <title>Pizza Drill</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>&#128600;Pizza King &#128602;</h1>
+        <p>royal ingredients make royal pizza</p>
+    </div>
+
+    <div id="menuBG">
+        <h2>&#128600;Order Here &#128602;</h2>
+        <input id="btnOrder" type="button" onclick="getRecipt()" value="Place Order">
+        <form id="frmMenu">
+            <div class="menu left">
+                <h3>&#128413; Size:</h3>
+                <input class="size" type="radio" name="Size" value="Personal Pizza">Personal Pizza<br>
+                <input class="size" type="radio" name="Size" value="Medium Pizza">Medium Pizza<br>
+                <input class="size" type="radio" name="Size" value="Large Pizza">Large Pizza<br>
+                <input class="size" type="radio" name="Size" value="X-Large Pizza">X-Large Pizza<br>
+                <input class="size" type="radio" name="Size" value="Royal Pizza">Royal Pizza<br>
+            </div>
+
+            <div class="menu right">
+                <h3>&#128413; Meats:</h3>
+                <input class="top" type="checkbox" name="Meat" value="Pepperoni">Pepperoni<br>
+                <input class="top" type="checkbox" name="Meat" value="Sausage">Sausage<br>
+                <input class="top" type="checkbox" name="Meat" value="Canadian Bacon">Canadian Bacon<br>
+                <input class="top" type="checkbox" name="Meat" value="Ground Beef">Ground Beef<br>
+                <input class="top" type="checkbox" name="Meat" value="Anchovy">Anchovy<br>
+                <input class="top" type="checkbox" name="Meat" value="Chicken">Chicken<br>
+                <input class="top" type="checkbox" name="Meat" value="Hot Coppa">Hot Coppa<br>
+            </div>
+
+            <div class="menu right">
+                <h3>&#128413; Veggies:</h3>
+                <input class="top" type="checkbox" name="Veg" value="Pepperoncini">Pepperoncini<br>
+                <input class="top" type="checkbox" name="Veg" value="Olives">Olives<br>
+                <input class="top" type="checkbox" name="Veg" value="Artichoke">Artichoke<br>
+                <input class="top" type="checkbox" name="Veg" value="Mushrooms">Mushrooms<br>
+                <input class="top" type="checkbox" name="Veg" value="Spinach">Spinach<br>
+                <input class="top" type="checkbox" name="Veg" value="Broccolini">Broccolini<br>
+                <input class="top" type="checkbox" name="Veg" value="Bell Peppers">Bell Peppers<br>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="cart">
+        <h1 id ="cartHeader">&#128600;Cart &#128602;</h1>
+        <div id="showText"></div>
+        <div id="totalPrice"></div>
+    </div>
+
+    <script src="Pizza_JS/Pizza.js"></script>
+</body>
+</html>

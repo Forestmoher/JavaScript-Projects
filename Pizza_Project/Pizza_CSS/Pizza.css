@@ -1,0 +1,103 @@
+#menuBG {
+    width: 650px;
+    height: 470px;
+    margin: 10px auto;
+    background: rgba(61, 58, 57, 0.5);
+    border-radius: 10px 10px 0 0;
+}
+
+#frmMenu {
+    width: 650px;
+    height: 200px;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+
+#showText {
+    text-align: center;
+}
+
+
+.left {
+    width: 180px;
+    height: 200px;
+    float:left;
+    padding-left: 10px;
+}
+
+.right {
+    width: 180px;
+    height: 200px;
+    float: right;
+    padding-left: 20px;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    margin: 0px auto;
+    width: 650px;
+    height: 300px;
+    background: rgba(61, 58, 57, 0.5);
+    border-radius: 0 0 10px 10px;
+}
+
+#cartHeader {
+    font-size: 30px;
+    padding-top: 10px;
+    margin-top: 0px;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 265px;
+    width: 100px;
+    height: 40px;
+    background-color: cornsilk;
+    border-radius: 10px;
+}
+#btnOrder:hover {
+    background-color: rgb(182, 177, 155);
+    box-shadow: inset 2px 2px 2px;
+}
+
+body {
+    background-image: url("../Pizza_img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+div {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
