@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="buttonbox" style="height: 800px; width: 600px; background: rgba(222,184,135,.6); margin: 0px auto;">
+        <h3 style="text-align: center;">Here are some of my favorite lyrics</h3>
+        <button style="margin-left: 250px;" onclick="myFunction()" id="btn">Click me</button>
+        <div id="content"></div>
+    </div>
+    
+    <script>
+
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "content_2.html")
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState == 4) {
+                document.getElementById("content").innerHTML = ajax.responseText;
+            }
+        }
+        function myFunction() {
+            ajax.send();
+            document.getElementById("btn").style.display = "none";
+        }
+
+    </script>
+
+
+
+</body>
+</html>
