@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <title>Document</title>
+</head>
+
+    <script>
+        $(document).ready(function() { //once document is loaded, do this function
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                    <p id='ghost'>Click here to see a spooky ghost</p<>\
+                    <img id='img' src='img/ghost.png'>\
+                    <form>\
+                        <p>Check the box to demo .change method</p>\
+                        <input id='check' type='checkbox'>\
+                </body>"
+            );
+            $("#2").css({"color":"red"}); //target p tag, then change css property
+            $("#3").click(function() {
+                $('h1').hide();
+            })
+            $("#check").change(function() {
+                alert("Handler for .change() called!");
+            })
+            $("#img").hide();
+            $("#ghost").click(function() {
+                $("img").fadeIn(1500);
+            })
+        });
+
+    </script>
+
+</html>
