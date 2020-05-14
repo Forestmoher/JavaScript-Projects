@@ -1,0 +1,450 @@
+
+/*body and header styles///////////////////////////////////////////
+////////////////////////////////////////////////////////////////*/
+
+html {
+    scroll-behavior: smooth;
+    overflow: scroll;
+}
+
+body {
+    margin: 0%;
+    opacity: 1;
+    transition: 3s opacity;
+    font-family: 'Amatic SC', cursive;
+}
+
+body.fadeout {
+    opacity: .1;
+    transition: none;
+}
+
+.background-image {
+    background-image: url("../images/lowpolyfull.jpg");
+    background-size: cover;
+    width: 100%;
+    top: 0px;
+    z-index: -1;
+    height: 100%;
+}
+
+.header {
+    margin-left: 0vw;
+    background-color: rgba(0, 0, 0, 0.308);
+    position: relative;
+    height: 25vw;
+    left: 0;
+    margin-top: 0vh;
+    padding-left: 20vw;
+    animation: headerAnimate 1.5s linear;
+    -webkit-animation: headerAnimate 1.5s linear;
+}
+
+@keyframes headerAnimate {
+   from {top: -40vw;}
+   to {top: 0vw}
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    font-size: 10vw;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    margin-bottom: 0vh;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    animation: headAnimate 4s;
+    -webkit-animation: headAnimate 4s;
+}
+
+@keyframes headAnimate {
+    from {text-shadow: 0 0 0 black;}
+    to {text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);}
+}
+
+.header p {
+    margin-left: 30vw;
+    margin-top: 0vw;
+    font-size: 2vw;
+    animation: quoteFade 4s;
+    -webkit-animation: quoteFade 4s;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes quoteFade {
+    0% {opacity: 0;}
+    25% {opacity: .25;}
+    50% {opacity: .5;}
+    100% {opacity: 1;}
+}
+
+p {
+    color: rgb(216, 216, 216);
+    font-size: 1.5vw;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+}
+
+/* sidebar styles ///////////////////////////////////////////////
+///////////////////////////////////////////////////////////////*/
+.sidebar {
+    height: 100%;
+    width: 15vw;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: #021c1e;
+    
+    animation: moveNav 2s;
+    -webkit-animation: moveNav 2s;
+}
+
+@keyframes moveNav {
+    from {left: -50vw;}
+    to {left: 0vw;}
+}
+
+video {
+    height: 100%;
+    filter: grayscale(1);
+    opacity: .5;
+    z-index: 1;
+}
+
+  .sidebar li {
+      list-style: none;
+      text-align: center;
+}
+
+  .sidebar ul {
+      padding-left: 0px;
+      position: absolute;
+      z-index: 2;
+      top: 30vw;
+      left: 4.5vw;
+  }
+
+  .sidebar h2 {
+      color: #7bacaa;
+	  text-align: center;
+      padding-bottom: 100px;
+      font-size: 2vw;
+      position: absolute;
+      z-index: 2;
+      top: 20vw;
+      left:5vw;
+  }
+  
+  .sidebar a {
+    padding: 6px 8px 6px 5px;
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: #80ced6;
+    display: block;
+    position: relative;
+  }
+
+    .sidebar a:nth-child(1) {
+    animation: listApear 2s;
+    -webkit-animation: listApear 2s;
+  }
+
+
+  @keyframes listApear {
+      from {left: -100vw;}
+      to {left: 0vw;}
+  }
+  
+  .sidebar a:hover {
+    color: white;
+	background-color: #6fb98f;
+	transform: translateX(20px);
+	border-radius: 10px;
+    
+  }
+
+/*shell style///////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////*/
+
+.shell {
+    margin-top: 10vw;
+    margin-left: 15vw;
+    min-height: 100%;
+}
+
+.column {
+    width: 45%;
+    border-radius: 10px;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    padding: 3vw auto;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.205);
+    text-align: center;
+    overflow: hidden;
+}
+
+.column:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, .75);
+}
+.row {
+    padding-left: 5vw;
+    height: 20vw;
+   margin-bottom: 5vw;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+p {
+    font-size: 1.5vw;
+}
+
+/*Slideshow style////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////*/
+
+.slide {
+    display: none;
+}
+
+.slideshowBackground {
+    background-color: rgba(0, 0, 0, 0.568);
+    height: 39vw;
+    width: 50vw;
+    margin-left: 30vw;
+    margin-top: 8vw;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    border-radius: 5px;
+}
+
+.slideshowContainer {
+    width: 33vw;
+    height: 35vw;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.slideImg {
+    vertical-align: middle;
+    height: 33vw;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: 33vw;
+    z-index: 1;
+    filter: grayscale(.8);
+    border-radius: 5px;
+}
+
+.slideImg:hover {
+    filter: grayscale(0);
+    transition: ease-in 1s;
+    transform: scale(1.05);
+}
+
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1vw;
+    margin-top: -0vw;
+    font-weight: bold;
+    font-size: 1.5vw;
+    user-select: none;
+    transition: .6s ease;
+    color: black;
+}
+
+.Next {
+    right: 0px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(8, 8, 8, 0.397);
+    color: rgb(245, 240, 240);
+}
+.slideNumber {
+    display: none;
+}
+
+.slideText {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 31vw;
+    text-align: center;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    background-color: rgba(0,0,0,0.75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+  }
+
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .5vw 1vw;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 2;
+    border: 2px solid #021c1ebb;
+    background-color: #047883;
+    box-shadow: inset -5px -3px 10px #05363a;
+}
+
+.active {
+    background-color: #054b50;
+    border: 2px solid #021c1ebb;
+    box-shadow: inset 5px 5px 5px black;
+}
+
+/*main content styles///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////*/
+
+.imageContainer {
+    height: 20.7vw;
+    overflow: hidden;
+}
+
+.imageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.github {
+    padding-top: 5.5vw;
+    padding-bottom: 0vw;
+    height: 15.2vw;
+}
+
+footer {
+    margin-left: 16vw;
+}
+
+/*Contact form style////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////*/
+
+#contactBtn {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 10vw;
+    background: #6fb98f;
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.418);
+    cursor: pointer;
+    position: fixed;
+    animation: popupForm 2s;
+    -webkit-animation: popupForm 2s;
+    font-size: 2vw;
+    border-radius: 8px;
+    font-family: "open sans condensed";
+}
+
+#contactBtn:hover {
+    background-color: #004445;
+    color: #6fb98f;
+    transition: .5s;
+}
+
+@keyframes popupForm {
+    from {bottom: -100vh;}
+    to {right: 1.75vw;}
+}
+
+#formShell {
+    display: none;
+    background-color: #021c1ecc;
+    z-index: 100;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+    padding: 2vw auto;
+}
+
+.formBackground {
+    background-color: rgba(231, 231, 231, 0.842);
+    max-width: 40vw;
+    padding: 1vw;
+
+}
+
+.formBackground h1 {
+    font-size: 8vw;
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+.form {
+    padding-left: 1vw;
+    
+}
+
+.form label {
+    font-size: 2vw;
+    font-family: "open sans condensed";
+    padding-bottom: 1vw;
+}
+.form input {
+    width: 95%;
+    height: 1.5vw;
+    padding: .2vw;
+    font-size: 1vw;
+}
+
+#comments {
+    padding-top: .5vw;
+    height: 4vw;
+    
+}
+
+.submit {
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: .5vw;
+    font-size: 1.5vw;
+    width: 45%;
+    height: 3vw;
+    margin-left: 1vw;
+}
+
+.close {
+    letter-spacing: .5vw;
+    font-size: 1.5vw;
+    font-family:  'Amatic SC', cursive;
+    width: 45%;
+    height: 3vw;
+    float: right;
+    margin-right: .8vw;
+    
+}
+
+.submit:hover {
+    font-family: 'Amatic SC', cursive;    
+    background-color: #6fb98f;
+    color:white;
+    transition: .5s;
+    box-shadow: inset 10px,10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.close:hover {
+    font-family: 'Amatic SC', cursive;
+    background-color: rgb(228, 56, 56);
+    transition: .5s;
+    color: white;
+}

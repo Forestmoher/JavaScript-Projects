@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/newpostfolio.css">
+    <script src="JS/portfolio_JS.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Open+Sans+Condensed:wght@300&family=Raleway&display=swap"
+        rel="stylesheet">
+
+    <title>Forest Moher|Software Developer</title>
+</head>
+
+<body class="background-image">
+    <!--Fade in effect-->
+    <script>
+        document.body.className += " fadeout";
+        $(function () {
+            $("body").removeClass("fadeout");
+        })
+    </script>
+    <!--end of fade in effect-->
+
+    <!--header-->
+    <div class="header" id="home">
+        <h1>Forest Moher</h1>
+        <p> Whether you want to uncover the secrets of the universe, or you<br>
+            just want to pursue a career in the 21<sup>st</sup> century,<br>
+            basic computer programming is an essential skill to learn. <br>
+            <cite>- Stephen Hawking</cite></p>
+    </div>
+    <!--End of header-->
+
+    <!--Side navbar-->
+    <div class="sidebar">
+        <h2>Welcome</h2>
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#github">github</a></li>
+            <li><a href="#contact" onclick="openForm()">contact</a></li>
+        </ul>
+        <video autoplay="autoplay" muted="muted" loop="loop">
+            <source src="videos/rain.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--end of Side navbar-->
+
+    <!--slideshow-->
+    <div class="slideshow">
+        <div class="slideshowBackground">
+            <div class="slideshowContainer">
+
+                <div class="slide">
+                    <div class="slideNumber">1</div>
+                    <img class="slideImg" src="images/portrait.jpg" alt="">
+                    <div class="slideText">I am a full stack developer, trained in:</div>
+                </div>
+
+                <div class="slide">
+                    <div class="slideNumber">2</div>
+                    <img class="slideImg" src="images/slide_1.jpg" alt="">
+                    <div class="slideText">HTML5, CSS3, JavaScript</div>
+                </div>
+
+                <div class="slide">
+                    <div class="slideNumber">3</div>
+                    <img class="slideImg" src="images/slide_2.jpg" alt="">
+                    <div class="slideText">C# and the .NET framework,</div>
+                </div>
+
+                <div class="slide">
+                    <div class="slideNumber">4</div>
+                    <img class="slideImg" src="images/slide_3.jpg" alt="">
+                    <div class="slideText">back end development, databases and SQL.</div>
+                </div>
+
+                <div class="slide">
+                    <div class="slideNumber">5</div>
+                    <img class="slideImg" src="images/slide_4.jpg" alt="">
+                    <div class="slideText">Please feel free to <a href="#contact" onclick="openForm()">Contact me</a>
+                    </div>
+                </div>
+
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+            <div style="text-align:center">
+
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <!--end of slideshow-->
+
+    <!--Main content-->
+    <div class="shell">
+        <div class="row" id="about">
+            <div class="column">
+                <div>
+                    <h2>About</h2>
+                    <p>Hello! I am a full-stack, junior software developer looking to join you on your next project.
+                        I am currently a student of <a href="https://learncodinganywhere.com">The Tech Academy</a>,
+                        studying C#, .Net framework, SQL, HTML5, JAVA, and CSS3.
+                        For the past ten years I have been working in the restaurant industry as a Chef. Now I am
+                        looking for new opportunuties and to expand my list of skills.
+                        I believe I will be a vital asset to any developent team, as I am a hard working and determined
+                        individual.
+                        Thank you for visiting my portfolio, and <i>please</i> feel free to <a href="#contact"
+                            onclick="openForm()">contact me!</a></p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="imageContainer">
+                    <img src="images/coding.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <div class="imageContainer">
+                    <img src="images/github-mark.png">
+                </div>
+            </div>
+
+            <div class="column github" id="github">
+                <h2>GitHub</h2>
+                <p>You can see all my coding projects on my GitHub profile:</p>
+                <a href="https://github.com/Forestmoher">Forest Moher GitHub</a>
+            </div>
+        </div>
+    </div>
+    <!--End of main content-->
+
+    <!--contact form-->
+
+    <button id="contactBtn" onclick="openForm()">Contact</button>
+
+    <div id="formShell">
+        <div class="formBackground">
+            <h1>Contact</h1>
+            <div class="form">
+                <label>Name</label><br><br>
+                <input type="text" placeholder="Name..."><br><br>
+                <label>Email</label><br><br>
+                <input type="email" placeholder="email..."><br><br>
+                <label>Comments</label><br><br>
+                <input id="comments" type="text"
+                    placeholder="Please let me know how I can become part of your team..."><br><br>
+            </div>
+            <button class="submit" onclick="openForm()">Submit</button>
+            <button class="close" onclick="closeForm()">Close</button>
+        </div>
+    </div>
+    <!--end of contact form-->
+
+    <!-- Footer section -->
+    <footer>
+        <p>
+            <center>&copy; Forest Moher 2020 <a href="https://github.com/Forestmoher">Forest Moher GitHub</a></center>
+            <br>
+        </p>
+    </footer>
+</body>
+
+</html>
